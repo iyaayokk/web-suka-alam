@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUKA ALAM - Keindahan & Misteri Gunung Indonesia</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-mountain"></i>
+        <span>SUKA ALAM</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#keindahan">Keindahan</a></li>
+        <li><a href="#misteri">Misteri & Mitos</a></li>
+        <li><a href="#explorer">Daftar Gunung</a></li>
+        <li><a href="#quiz" class="nav-btn">Cari Gunung Mu</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+    <header class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-compass"></i> Menjelajah Zamrud Khatulistiwa
+        </div>
+        <h1>Menguak Keindahan & Misteri Gunung Indonesia</h1>
+        <p>
+          Temukan simfoni pemandangan megah di atas awan, keanekaragaman hayati
+          purba, serta bisikan legenda mistik yang menyelimuti puncak-puncak
+          Indonesia.
+        </p>
+        <div class="hero-actions">
+          <a href="#keindahan" class="btn-primary">
+            Jelajahi Sekarang <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#misteri" class="btn-outline"> Telusuri Misteri </a>
+        </div>
+      </div>
+    </header>
+
+    <section id="keindahan">
+      <div class="section-header">
+        <span class="subtitle">Persona Alam</span>
+        <h2>Keindahan Di Atas Awan</h2>
+        <p>
+          Dari samudra awan hingga danau kawah berusia jutaan tahun, rasakan
+          pesona lanskap pegunungan Indonesia yang tiada tanding.
+        </p>
+      </div>
+
+      <div class="beauty-grid">
+        <!-- Card 1: Bromo -->
+        <div class="beauty-card" onclick="openModal('bromo')">
+          <div class="card-img-wrapper">
+            <span class="card-tag">Laut Pasir & Sunrise</span>
+            <img src="images/Bromo.jpg" alt="Gunung Bromo" />
+          </div>
+          <div class="card-body">
+            <h3>Gunung Bromo</h3>
+            <div class="card-location">
+              <i class="fa-solid fa-location-dot"></i> Jawa Timur
+            </div>
+            <p>
+              Terkenal dengan hamparan laut pasir kaldera seluas 10 km², kawah
+              aktif yang terus mengepulkan asap, dan pemandangan sunrise
+              dramatis dari Penanjakan.
+            </p>
+            <div class="card-footer">
+              <span class="height-info"
+                ><i class="fa-solid fa-mountain"></i> 2.329 mdpl</span
+              >
+              <span class="read-more"
+                >Detail <i class="fa-solid fa-chevron-right"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Rinjani -->
+        <div class="beauty-card" onclick="openModal('rinjani')">
+          <div class="card-img-wrapper">
+            <span class="card-tag">Danau Kawah Megah</span>
+            <img src="images/Rinjani.jpg" alt="Gunung Rinjani" />
+          </div>
+          <div class="card-body">
+            <h3>Gunung Rinjani</h3>
+            <div class="card-location">
+              <i class="fa-solid fa-location-dot"></i> Nusa Tenggara Barat
+            </div>
+            <p>
+              Rumah bagi Danau Segara Anak yang membiru memikat, sabana Sembalun
+              yang membentang luas, serta anak gunung Barujari di tengah kawah.
+            </p>
+            <div class="card-footer">
+              <span class="height-info"
+                ><i class="fa-solid fa-mountain"></i> 3.726 mdpl</span
+              >
+              <span class="read-more"
+                >Detail <i class="fa-solid fa-chevron-right"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Prau -->
+        <div class="beauty-card" onclick="openModal('prau')">
+          <div class="card-img-wrapper">
+            <span class="card-tag">Golden Sunrise Terbaik</span>
+            <img src="images/Prau.jpg" alt="Gunung Prau" />
+          </div>
+          <div class="card-body">
+            <h3>Gunung Prau</h3>
+            <div class="card-location">
+              <i class="fa-solid fa-location-dot"></i> Jawa Tengah
+            </div>
+            <p>
+              Favorit para pendaki pemula hingga profesional, menawarkan lanskap
+              puncak berbentuk bukit Teletubbies dan siluet gagah
+              Sindoro-Sumbing.
+            </p>
+            <div class="card-footer">
+              <span class="height-info"
+                ><i class="fa-solid fa-mountain"></i> 2.565 mdpl</span
+              >
+              <span class="read-more"
+                >Detail <i class="fa-solid fa-chevron-right"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mystery-section" id="misteri">
+      <div class="section-header">
+        <span class="subtitle">Sisi Gaib & Folklore</span>
+        <h2>Misteri & Mitos Legendaris</h2>
+        <p>
+          Di balik kemegahan puncaknya, gunung-gunung Indonesia menyimpan
+          rahasia spiritual, ritual adat, dan tuturan leluhur yang tetap
+          dihormati hingga kini.
+        </p>
+      </div>
+
+      <div class="mystery-tabs">
+        <button class="tab-btn active" onclick="filterMystery('all')">
+          Semua Mitos
+        </button>
+        <button class="tab-btn" onclick="filterMystery('pasar-gaib')">
+          Pasar Gaib
+        </button>
+        <button class="tab-btn" onclick="filterMystery('kerajaan')">
+          Kerajaan Gaib
+        </button>
+        <button class="tab-btn" onclick="filterMystery('penjaga')">
+          Sosok Penjaga
+        </button>
+      </div>
+
+      <div class="mystery-grid" id="mysteryGrid">
+        <!-- Mystery Item 1 -->
+        <div class="mystery-card" data-category="pasar-gaib">
+          <div class="mystery-icon"><i class="fa-solid fa-ghost"></i></div>
+          <div class="mystery-tag">Gunung Lawu</div>
+          <h3>Pasar Setan (Pasar Dieng)</h3>
+          <p>
+            Di sekitar pos Hargo Dumilah, banyak pendaki mengaku mendengar
+            keramaian layaknya pasar tradisional di tengah malam hampa, lengkap
+            dengan transaksi gaib barter koin.
+          </p>
+        </div>
+
+        <!-- Mystery Item 2 -->
+        <div class="mystery-card" data-category="kerajaan">
+          <div class="mystery-icon"><i class="fa-solid fa-crown"></i></div>
+          <div class="mystery-tag">Gunung Merapi</div>
+          <h3>Kerajaan Mataram Gaib</h3>
+          <p>
+            Masyarakat lokal meyakini puncak Keraton Merapi dihuni oleh bangsa
+            halus dengan strata sosial kerajaan, dipimpin oleh sosok Kyai Sapu
+            Jagad yang menjaga kawah.
+          </p>
+        </div>
+
+        <!-- Mystery Item 3 -->
+        <div class="mystery-card" data-category="penjaga">
+          <div class="mystery-icon"><i class="fa-solid fa-dragon"></i></div>
+          <div class="mystery-tag">Gunung Rinjani</div>
+          <h3>Dewi Anjani & Segara Anak</h3>
+          <p>
+            Danau Segara Anak dipercaya dikuasai oleh Dewi Anjani, dewi bertubuh
+            indah yang mengayomi seluruh makhluk di kawasan Lombok dan menjaga
+            keasrian kawah.
+          </p>
+        </div>
+
+        <!-- Mystery Item 4 -->
+        <div class="mystery-card" data-category="pasar-gaib">
+          <div class="mystery-icon"><i class="fa-solid fa-mask"></i></div>
+          <div class="mystery-tag">Gunung Salak</div>
+          <h3>Puncak Manik & Suara Adzan</h3>
+          <p>
+            Dikenal memiliki anomali magnetik dan cuaca yang cepat berubah,
+            Gunung Salak kaya akan kisah jeritan gaib di Puncak Manik dan
+            kampung gaib di tebing terjal.
+          </p>
+        </div>
+
+        <!-- Mystery Item 5 -->
+        <div class="mystery-card" data-category="kerajaan">
+          <div class="mystery-icon">
+            <i class="fa-solid fa-door-closed"></i>
+          </div>
+          <div class="mystery-tag">Gunung Kerinci</div>
+          <h3>Pintu Langit & Cindaku</h3>
+          <p>
+            Legenda manusia harimau (Cindaku) penjaga kelestarian hutan Sumatra,
+            yang diyakini akan menampakkan diri jika ada manusia yang merusak
+            alam Kerinci.
+          </p>
+        </div>
+
+        <!-- Mystery Item 6 -->
+        <div class="mystery-card" data-category="penjaga">
+          <div class="mystery-icon"><i class="fa-solid fa-eye"></i></div>
+          <div class="mystery-tag">Gunung Semeru</div>
+          <h3>Dewi Tanjakan Cinta & Arcopodo</h3>
+          <p>
+            Mitos dilarang menengok ke belakang saat melintasi Tanjakan Cinta,
+            serta arca kembar Arcopodo di jalur puncak yang terkadang memudar
+            dari pandangan mata.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="explorer-section" id="explorer">
+      <div class="section-header">
+        <span class="subtitle">Eksplorasi Katalog</span>
+        <h2>Cari Gunung Impianmu</h2>
+        <p>
+          Pilih kategori yang sesuai dengan gaya petualanganmu, dari trek santai
+          keluarga hingga ekpedisi ekstrem.
+        </p>
+      </div>
+
+      <div class="filter-container">
+        <button class="filter-btn active" onclick="filterMountains('all')">
+          Semua Gunung
+        </button>
+        <button class="filter-btn" onclick="filterMountains('sunrise')">
+          Sunrise Cantik
+        </button>
+        <button class="filter-btn" onclick="filterMountains('mistik')">
+          Mistik & Mitos
+        </button>
+        <button class="filter-btn" onclick="filterMountains('santai')">
+          Pendakian Santai
+        </button>
+        <button class="filter-btn" onclick="filterMountains('ekstrem')">
+          Tantangan Ekstrem
+        </button>
+      </div>
+
+      <div class="explorer-grid" id="explorerGrid">
+        <!-- Mountain items will be populated by JavaScript -->
+      </div>
+    </section>
+
+    <section id="quiz">
+      <div class="quiz-section">
+        <div class="quiz-container">
+          <span class="subtitle" style="color: var(--accent-gold)"
+            >Interactive Quiz</span
+          >
+          <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: #fff">
+            Gunung Apa yang Cocok Untukmu?
+          </h2>
+          <p style="color: #c0c8c2; margin-bottom: 2.5rem">
+            Jawab 3 pertanyaan singkat ini untuk menemukan destinasi gunung yang
+            paling selaras dengan jiwa petualangmu!
+          </p>
+
+          <!-- Question 1 -->
+          <div class="quiz-step active" id="quizStep1">
+            <div class="quiz-question">
+              1. Apa tujuan utama kamu mendaki gunung?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-opt-btn" onclick="answerQuiz('A')">
+                <i class="fa-solid fa-camera"></i> Berburu foto sunrise &
+                pemandangan
+              </button>
+              <button class="quiz-opt-btn" onclick="answerQuiz('B')">
+                <i class="fa-solid fa-fire-burner"></i> Santai, kamping, &
+                menikmati udara segar
+              </button>
+              <button class="quiz-opt-btn" onclick="answerQuiz('C')">
+                <i class="fa-solid fa-skull"></i> Menjajal fisik & pengalaman
+                misteri/legenda
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="quiz-step" id="quizStep2">
+            <div class="quiz-question">
+              2. Berapa lama durasi pendakian yang kamu sukai?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-opt-btn" onclick="answerQuiz('A')">
+                <i class="fa-solid fa-clock"></i> Singkat (Tektok / 3-5 Jam
+                saja)
+              </button>
+              <button class="quiz-opt-btn" onclick="answerQuiz('B')">
+                <i class="fa-solid fa-campground"></i> 2 Hari 1 Malam (Standar
+                Kamping)
+              </button>
+              <button class="quiz-opt-btn" onclick="answerQuiz('C')">
+                <i class="fa-solid fa-calendar-days"></i> 3-5 Hari Ekspedisi
+                Panjang
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz-step" id="quizStep3">
+            <div class="quiz-question">
+              3. Suasana malam seperti apa yang kamu inginkan di tenda?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-opt-btn" onclick="answerQuiz('A')">
+                <i class="fa-solid fa-stars"></i> Langit bertabur bintang &
+                hangatnya kopi
+              </button>
+              <button class="quiz-opt-btn" onclick="answerQuiz('B')">
+                <i class="fa-solid fa-tree"></i> Suara derik jangkrik & angin
+                hutan rindang
+              </button>
+              <button class="quiz-opt-btn" onclick="answerQuiz('C')">
+                <i class="fa-solid fa-moon"></i> Hening, dingin ekstrem, & aura
+                keheningan mistis
+              </button>
+            </div>
+          </div>
+
+          <!-- Quiz Result -->
+          <div class="quiz-step" id="quizResult">
+            <div class="quiz-result">
+              <h3
+                id="resultTitle"
+                style="color: var(--accent-gold); font-size: 1.8rem"
+              >
+                Gunung Prau
+              </h3>
+              <p id="resultDesc" style="color: #e2ddd3; margin-top: 0.5rem">
+                Kamu adalah pencari keindahan sejati! Gunung Prau cocok untukmu
+                karena menyajikan panorama lautan awan terindah tanpa medan yang
+                menuntut fisik terlalu keras.
+              </p>
+              <img id="resultImg" src="images/Prau.jpg" alt="Hasil Quiz" />
+              <br />
+              <button
+                class="btn-primary"
+                onclick="resetQuiz()"
+                style="margin-top: 1rem"
+              >
+                <i class="fa-solid fa-rotate-right"></i> Coba Lagi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      onclick="closeModalOnOverlay(event)"
+    >
+      <div class="modal-card">
+        <button class="modal-close" onclick="closeModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="modalImg" class="modal-header-img" src="" alt="Gunung" />
+        <div class="modal-content">
+          <h3 id="modalTitle" class="modal-title">Nama Gunung</h3>
+          <div class="modal-meta">
+            <span
+              ><i class="fa-solid fa-location-dot"></i>
+              <span id="modalLoc">Lokasi</span></span
+            >
+            <span
+              ><i class="fa-solid fa-mountain"></i>
+              <span id="modalHeight">0 mdpl</span></span
+            >
+            <span
+              ><i class="fa-solid fa-route"></i>
+              <span id="modalDiff">Kesulitan</span></span
+            >
+          </div>
+          <div class="modal-body">
+            <h4>
+              <i
+                class="fa-solid fa-leaf"
+                style="color: var(--accent-terracotta)"
+              ></i>
+              Daya Tarik Alam
+            </h4>
+            <p id="modalNature">Deskripsi alam...</p>
+
+            <h4>
+              <i
+                class="fa-solid fa-book-skull"
+                style="color: var(--accent-terracotta)"
+              ></i>
+              Mitos & Legenda
+            </h4>
+            <p id="modalMyth">Deskripsi mitos...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="color: #ffffff; margin-bottom: 1rem">
+            <i
+              class="fa-solid fa-mountain"
+              style="color: var(--accent-gold)"
+            ></i>
+            SUKA ALAM
+          </div>
+          <p>
+            Platform eksplorasi digital keindahan lanskap flora, fauna, dan
+            mitologi nusantara. Didedikasikan untuk kelestarian alam Indonesia.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi Ringkas</h4>
+          <ul class="footer-links">
+            <li><a href="#keindahan">Keindahan Awan</a></li>
+            <li><a href="#misteri">Mitos & Folklore</a></li>
+            <li><a href="#explorer">Katalog Gunung</a></li>
+            <li><a href="#quiz">Quiz Interaktif</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Etika Pendaki</h4>
+          <ul class="footer-links">
+            <li>
+              <i
+                class="fa-solid fa-check"
+                style="color: var(--accent-gold)"
+              ></i>
+              Jangan tinggalkan apapun kecuali jejak
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-check"
+                style="color: var(--accent-gold)"
+              ></i>
+              Jangan mengambil apapun kecuali foto
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-check"
+                style="color: var(--accent-gold)"
+              ></i>
+              Jangan membunuh apapun kecuali waktu
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 SUKA ALAM. Dibuat dengan apresiasi tinggi untuk Alam
+          Indonesia.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
