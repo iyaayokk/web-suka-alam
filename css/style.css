@@ -145,7 +145,7 @@ h4,
       rgba(27, 41, 28, 0.4) 0%,
       rgba(27, 41, 28, 0.8) 100%
     ),
-    url("images/Prau.jpg") center/cover no-repeat;
+    url("../images/Prau.jpg") center/cover no-repeat;
   color: #ffffff;
   text-align: center;
 }
@@ -750,6 +750,143 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.85rem;
   color: #8a948c;
+}
+
+.detail-page {
+  min-height: 100vh;
+}
+
+.detail-hero {
+  min-height: 62vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 8rem 8% 4rem;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+}
+
+.detail-hero-content {
+  max-width: 850px;
+}
+
+.detail-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 1.05;
+  margin: 1rem 0;
+}
+
+.detail-hero p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--accent-gold-light);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.detail-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 8%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.65fr);
+  gap: 3rem;
+}
+
+.detail-story h2 {
+  color: var(--primary-forest);
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.detail-story p {
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.detail-story + .detail-story {
+  border-left: 1px solid var(--border-light);
+  padding-left: 2.5rem;
+}
+
+.detail-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background: #e8ece5;
+  border-left: 3px solid var(--secondary-olive);
+  color: var(--secondary-olive);
+  font-size: 0.9rem;
+}
+
+.detail-sources-title {
+  color: var(--primary-forest);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.detail-sources {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.detail-sources a {
+  color: var(--accent-terracotta);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.detail-sources a:hover {
+  color: var(--primary-forest);
+}
+
+.detail-error {
+  min-height: 70vh;
+  padding: 10rem 8% 4rem;
+  text-align: center;
+}
+
+.detail-error h1 {
+  color: var(--primary-forest);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  .detail-hero {
+    min-height: 68vh;
+    padding: 7rem 6% 3rem;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+    padding: 3rem 6%;
+    gap: 2rem;
+  }
+
+  .detail-story + .detail-story {
+    border-left: 0;
+    border-top: 1px solid var(--border-light);
+    padding: 2rem 0 0;
+  }
 }
 
 @keyframes fadeInUp {

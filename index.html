@@ -16,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <nav class="navbar" id="navbar">
@@ -28,7 +28,7 @@
         <li><a href="#keindahan">Keindahan</a></li>
         <li><a href="#misteri">Misteri & Mitos</a></li>
         <li><a href="#explorer">Daftar Gunung</a></li>
-        <li><a href="#quiz" class="nav-btn">Cari Gunung Mu</a></li>
+        <li><a href="#quiz" class="nav-btn">Find Your Mountain</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
         <i class="fa-solid fa-bars"></i>
@@ -67,7 +67,10 @@
 
       <div class="beauty-grid">
         <!-- Card 1: Bromo -->
-        <div class="beauty-card" onclick="openModal('bromo')">
+        <div
+          class="beauty-card"
+          onclick="window.location.href = 'pages/gunung.html?gunung=bromo'"
+        >
           <div class="card-img-wrapper">
             <span class="card-tag">Laut Pasir & Sunrise</span>
             <img src="images/Bromo.jpg" alt="Gunung Bromo" />
@@ -94,7 +97,10 @@
         </div>
 
         <!-- Card 2: Rinjani -->
-        <div class="beauty-card" onclick="openModal('rinjani')">
+        <div
+          class="beauty-card"
+          onclick="window.location.href = 'pages/gunung.html?gunung=rinjani'"
+        >
           <div class="card-img-wrapper">
             <span class="card-tag">Danau Kawah Megah</span>
             <img src="images/Rinjani.jpg" alt="Gunung Rinjani" />
@@ -120,7 +126,10 @@
         </div>
 
         <!-- Card 3: Prau -->
-        <div class="beauty-card" onclick="openModal('prau')">
+        <div
+          class="beauty-card"
+          onclick="window.location.href = 'pages/gunung.html?gunung=prau'"
+        >
           <div class="card-img-wrapper">
             <span class="card-tag">Golden Sunrise Terbaik</span>
             <img src="images/Prau.jpg" alt="Gunung Prau" />
@@ -489,6 +498,21 @@
             </li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Ikuti & Support</h4>
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://www.instagram.com/kkiyok_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-instagram"></i>Kkiyok_
+              </a>
+            </li>
+            <li>Support Me</li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>
@@ -498,6 +522,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
