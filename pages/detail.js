@@ -43,5 +43,75 @@ if (!mountain) {
                 </ul>
             </article>
         </section>
+        <section class="location-share" aria-labelledby="locationShareTitle">
+            <div class="location-share-card">
+                <span class="subtitle">Bagikan lokasi</span>
+                <h2 id="locationShareTitle">Bantu kami memahami lokasi pengunjung</h2>
+                <p>Jika kamu setuju, koordinat lokasi saat ini, tingkat akurasi, nama gunung yang sedang dilihat, dan waktu pengiriman akan disimpan di Google Sheets. Lokasi tidak dikirim sebelum kamu menekan tombol. Jangan bagikan jika kamu tidak nyaman.</p>
+                <button class="btn-primary location-share-button" id="shareLocationButton" type="button">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Izinkan & bagikan lokasi
+                </button>
+                <p class="location-share-status" id="locationShareStatus" role="status" aria-live="polite"></p>
+            </div>
+        </section>
     `;
+
+    const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyxZWeAV0SCgpTQ6wwUydD-tfVmIQJm7JuzhJ9q1ZGl1qJARkAMc6AeV9_yRlQS8RqY/exec';
+    const shareLocationButton = document.getElementById('shareLocationButton');
+    const locationShareStatus = document.getElementById('locationShareStatus');
+
+    shareLocationButton.addEventListener('click', () => {
+        if (!window.isSecureContext || !navigator.geolocation) {
+            locationShareStatus.textContent = 'Fitur lokasi memerlukan HTTPS (atau localhost) dan browser yang mendukung lokasi.';
+            return;
+        }
+
+        if (!GOOGLE_SHEETS_ENDPOINT.startsWith('https://script.google.com/macros/s/')) {
+            locationShareStatus.textContent = 'Penyimpanan belum dikonfigurasi. Admin perlu memasang URL Web App Google Apps Script terlebih dahulu.';
+            return;
+        }
+
+        shareLocationButton.disabled = true;
+        locationShareStatus.textContent = 'Meminta izin lokasi dari browser…';
+
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            const submission = {
+                mountainKey,
+                mountain: mountain.title,
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+                accuracyMeters: position.coords.accuracy,
+                capturedAt: new Date().toISOString()
+            };
+
+            locationShareStatus.textContent = 'Mengirim lokasi ke Google Sheets…';
+
+            try {
+                await fetch(GOOGLE_SHEETS_ENDPOINT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(submission)
+                });
+                locationShareStatus.textContent = 'Permintaan pengiriman sudah dilakukan. Periksa Google Sheets untuk memastikan data tercatat.';
+            } catch (error) {
+                console.error('Gagal mengirim lokasi ke Google Sheets:', error);
+                locationShareStatus.textContent = 'Lokasi berhasil didapatkan, tetapi gagal dikirim. Periksa koneksi internet dan coba lagi.';
+                shareLocationButton.disabled = false;
+            }
+        }, (error) => {
+            const messages = {
+                1: 'Izin lokasi ditolak. Tidak ada lokasi yang dikirim.',
+                2: 'Lokasi tidak dapat ditentukan. Coba lagi saat sinyal tersedia.',
+                3: 'Permintaan lokasi melewati batas waktu. Coba lagi.'
+            };
+            locationShareStatus.textContent = messages[error.code] || 'Lokasi tidak dapat diakses. Silakan coba lagi.';
+            shareLocationButton.disabled = false;
+        }, {
+            enableHighAccuracy: false,
+            timeout: 15000,
+            maximumAge: 0
+        });
+    });
 }

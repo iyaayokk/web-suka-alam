@@ -70,6 +70,32 @@ const mountainsData = {
             { title: "Dinas Kebudayaan DIY: kegiatan dan makna Labuhan Merapi", url: "https://budaya.jogjaprov.go.id/berita/detail/1870-labuhan-merapi1" }
         ]
     },
+    merbabu: {
+        title: "Gunung Merbabu",
+        location: "Jawa Tengah",
+        height: "3.145 mdpl",
+        difficulty: "Sedang - Tinggi",
+        category: ["sunrise", "mistik", "ekstrem"],
+        img: "images/Merbabu.jpg",
+        nature: "Merbabu menyuguhkan perjalanan yang berubah dari teduhnya hutan pegunungan menjadi padang rumput luas dan punggung terbuka. Di beberapa jalur, sabana menjadi tempat pendaki beristirahat sambil memandang lekuk lereng; ketika musim berbunga tiba, edelweiss menambah warna tanpa perlu dipetik atau diinjak. Dari kawasan puncak, cuaca cerah dapat membuka panorama Merapi yang tampak dekat, disertai jajaran gunung lain di Jawa Tengah. Lima puncak yang kerap disebut pendaki, termasuk Triangulasi dan Kenteng Songo, memberi karakter berbeda pada bentang puncaknya. Kabut yang bergerak cepat, angin dingin, dan perubahan suhu mengingatkan bahwa jalur terbuka tetap menuntut perlengkapan serta persiapan matang. Merbabu berada dalam kawasan taman nasional, sehingga aturan jalur, kuota, dan penutupan resmi perlu diperiksa sebelum berangkat.",
+        myth: "Di kalangan pendaki, Merbabu kadang dikaitkan dengan cerita tentang Pasar Setan, pasar gaib yang konon terdengar ramai di tengah sunyi gunung. Penuturannya tidak tunggal: ada yang menggambarkan suara orang berbincang atau aktivitas jual beli, ada pula yang hanya menyebut suasana aneh ketika kabut turun dan pandangan terbatas. Cerita semacam ini termasuk folklore dan pengalaman pribadi yang diwariskan dari mulut ke mulut, bukan peristiwa yang telah dibuktikan. Suasana sabana yang luas, perubahan cuaca, dan suara angin dapat terasa ganjil saat malam, tetapi pengalaman itu tidak perlu dianggap sebagai bukti kehadiran sesuatu yang gaib. Merbabu juga memiliki hubungan panjang dengan kehidupan warga di lerengnya; karena itu, menghormati aturan kawasan dan tempat yang dianggap penting lebih bermakna daripada mencari sensasi. Kisah misterinya dapat dinikmati sebagai bagian dari budaya pendakian, sambil tetap menjaga nalar dan keselamatan.",
+        sources: [
+            { title: "Balai Taman Nasional Gunung Merbabu", url: "https://tngunungmerbabu.org/" }
+        ]
+    },
+    argopuro: {
+        title: "Gunung Argopuro",
+        location: "Jawa Timur",
+        height: "3.088 mdpl",
+        difficulty: "Tinggi - Ekstrem",
+        category: ["mistik", "ekstrem"],
+        img: "images/Argopuro.jpg",
+        nature: "Pegunungan Argopuro dikenal lewat lintasan panjang yang membawa pendaki melewati hutan, punggung bukit, lembah, dan padang rumput dalam satu perjalanan. Sabana Cikasur menjadi salah satu lanskap yang paling membekas: hamparannya terasa lapang setelah jalur hutan, dengan aliran air dan sisa-sisa bangunan yang sering mengundang rasa ingin tahu. Di bagian lain, Rawa Embik dan kawasan Danau Taman Hidup menawarkan suasana lebih teduh dan sunyi, kontras dengan jalur terbuka yang terpapar matahari serta angin. Puncak Rengganis menjadi tujuan penting di rangkaian puncaknya, sementara jarak antartitik dan minimnya sumber air pada bagian tertentu membuat perencanaan logistik sangat penting. Bentang alamnya bukan hanya indah karena luas, tetapi juga karena perubahan suasana dari hari ke hari. Pendaki sebaiknya memastikan jalur dan aturan terbaru kepada pengelola, membawa persediaan yang memadai, serta menjaga sumber air dan kawasan yang dilalui.",
+        myth: "Puncak Rengganis lekat dengan legenda Dewi Rengganis, seorang putri yang dalam berbagai versi cerita dikaitkan dengan kerajaan dan kehidupan masa lampau di kawasan Argopuro. Sebagian kisah tutur menyebut adanya istana atau tempat tinggal sang putri di puncak; reruntuhan batu yang dijumpai pendaki kerap menguatkan imajinasi tentang cerita itu. Namun, legenda, tafsir atas peninggalan, dan fakta sejarah adalah hal yang berbeda, sehingga kisah istana Rengganis tidak dapat diperlakukan sebagai catatan sejarah yang sudah terverifikasi. Danau Taman Hidup pun hadir dalam cerita pendaki sebagai tempat yang terasa sunyi dan menyimpan suasana misterius. Kesan tersebut bisa tumbuh dari kabut, hutan yang rapat, dan jauhnya kawasan dari permukiman, sementara versi cerita berbeda-beda dari satu penutur ke penutur lain. Cerita-cerita itu dapat dinikmati sebagai folklore setempat tanpa mengganggu ketenangan alam, merusak peninggalan, atau mengabaikan keselamatan selama perjalanan.",
+        sources: [
+            { title: "Balai Besar KSDA Jawa Timur", url: "https://bbksdajatim.org/" }
+        ]
+    },
     kerinci: {
         title: "Gunung Kerinci",
         location: "Jambi, Sumatra",
