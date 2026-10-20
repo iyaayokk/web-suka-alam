@@ -875,6 +875,67 @@ footer {
   font-size: 0.9rem;
 }
 
+.location-consent-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(15, 23, 16, 0.72);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.location-consent-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.location-consent-card {
+  width: min(100%, 520px);
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(16px);
+  transition: var(--transition);
+}
+
+.location-consent-overlay.active .location-consent-card {
+  transform: translateY(0);
+}
+
+.location-consent-card h2 {
+  margin: 0.5rem 0 0.75rem;
+  color: var(--primary-forest);
+}
+
+.location-consent-card > p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.location-consent-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1.25rem;
+}
+
+.location-consent-later {
+  padding: 0.8rem 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .detail-sources-title {
   color: var(--primary-forest);
   font-family: "Plus Jakarta Sans", sans-serif;
