@@ -45,12 +45,12 @@ if (!mountain) {
         </section>
         <section class="location-share" aria-labelledby="locationShareTitle">
             <div class="location-share-card">
-                <span class="subtitle">Bagikan lokasi</span>
-                <h2 id="locationShareTitle">Bantu kami memahami lokasi pengunjung</h2>
-                <p>Jika kamu setuju, koordinat lokasi saat ini, tingkat akurasi, nama gunung yang sedang dilihat, dan waktu pengiriman akan disimpan di Google Sheets. Lokasi tidak dikirim sebelum kamu menekan tombol. Jangan bagikan jika kamu tidak nyaman.</p>
+                <span class="subtitle">Suka alam</span>
+                <h2 id="locationShareTitle">Support My Journey</h2>
+                <p>Every great journey begins with a little support. Your kindness, encouragement, and support mean more than words can express. Together, we can turn dreams into reality and make something truly meaningful. Thank you for being part of my journey. ❤️</p>
                 <button class="btn-primary location-share-button" type="button" data-share-location data-mountain-key="${mountainKey}" data-mountain-name="${mountain.title}" data-status-target="detailLocationStatus">
                     <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                    Izinkan & bagikan lokasi
+                    Support me
                 </button>
                 <p class="location-share-status" id="detailLocationStatus" role="status" aria-live="polite"></p>
             </div>
